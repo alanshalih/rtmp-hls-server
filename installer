@@ -1,0 +1,9 @@
+apt-get update
+apt-get install nginx -y
+apt-get install ffmpeg -y
+apt install npm -y
+mkdir /var/www/html/video
+npm install -g pm2
+git clone https://alanshalih@bitbucket.org/alanshalih/transcoder.git
+cd /root/transcoder && npm install 
+cd /root/transcoder && pm2 start app.js
